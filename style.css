@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background-color: aqua;
+
+}
+
+main {
+  display: flex;
+  height: 80vh;
+  min-height: 395px;
+}
+
+section {
+  width: 85vw;
+  background-color: rgb(222, 193, 193);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 15vw;
+  background-color: rgb(176, 189, 211);
+}
+
+.section-body-menuitem {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  
+}
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+.section-body {
+  display: flex;
+  /* background-color: cadetblue; */
+  width: 60vw;
+  min-height: 40vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;  
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  /* background-color: gold; */
+  
+}
+form h1 {
+  display: flex; 
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border: 2px solid black;
+  background-color: rgb(210, 155, 15);
+  
+
+}
+input, form h1 {
+  min-width: 150px;
+  width: 40vw;
+  height: 3rem;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.btn {
+  display: flex;
+  width: 40vw;
+  height: 3rem;
+  gap: 10px;
+  
+
+}
+
+#submit {
+  width: 50%;
+  background-color: darkgreen;
+  color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+
+}
+#reset {
+  width: 50%;
+  background-color: red;
+  color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+footer {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background-color: aqua;
+ 
+
+}
+
+@media screen and (max-width: 800px) {
+  .section-body-menuitem {
+    display: none;
+  }
+ 
+  header{
+    height: 10vh;
+  }
+  footer{
+    height: 10vh;
+  }
+  .section-body {
+    
+    width: 100vw;
+    height: 80vh;
+    ;
+  }
+  form input, form h1 , .btn{
+    
+    width: 90vw;
+    height: 60vh;
+  }
+  form h1{
+    margin-top: 20px;
+  }
+  .btn{
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .section-body-menuitem {
+    display: none;
+  }
+  aside{
+    display: none;
+  }
+  header{
+    height: 10vh;
+  }
+  footer{
+    height: 10vh;
+  }
+  .section-body {
+    
+    width: 100vw;
+    height: 80vh;
+    ;
+  }
+  form input, form h1 , .btn{
+    
+    width: 90vw;
+    height: 60vh;
+  }
+  form h1{
+    margin-top: 20px;
+  }
+  .btn{
+    margin-bottom: 20px;
+  }
+}
