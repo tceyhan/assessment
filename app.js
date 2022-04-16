@@ -9,10 +9,10 @@ randomColor = () => {
   const submit = document.getElementById("submit");
   const form = document.getElementsByTagName("form");
 
-  const inputName = document.getElementById("name");
-  const inputSurname = document.getElementById("surname");
-  const inputEmail = document.getElementById("email");
-  const password = document.getElementById("password");
+  const one = document.getElementById("name");
+  const two = document.getElementById("surname");
+  const three = document.getElementById("email");
+  const four= document.getElementById("password");
 
   submit.addEventListener("click", (e) => {
     e.preventDefault();
@@ -23,19 +23,44 @@ randomColor = () => {
     }
   });
 
-  reset.addEventListener("click", (e) => {
-    e.preventDefault();
-    inputName.value = "";
-    inputSurname.value = "";
-    inputEmail.value = "";
-    password.value = "";    
+  // reset.addEventListener("click", (e) => {
+  //   e.preventDefault();
+  //   inputName.value = "";
+  //   inputSurname.value = "";
+  //   inputEmail.value = "";
+  //   password.value = "";    
+  // });
+
+let one= "";
+let two = "";
+let three = "";
+let four = "";
+  
+  Array.from(input).forEach((e) => {
+    e.addEventListener("keyup", (a) => {
+      x = e.value;
+      if (e.id === "name") {
+          one = e.value;
+      }else if(e.id === "surname"){
+          two = e.value;
+      }else if(e.id === "email"){
+          three=e.value;
+      }else if(e.id === "password"){
+          four=e.value;
+      }
+  
+      if (one && two && three && four) {
+          console.log("olur");
+          reset.disabled = false;
+          submit.disabled = false;
+          
+      } else {
+          console.log("olmaz");
+          reset.disabled = true;
+          submit.disabled = true;
+      }
+    });
   });
-   form[0].addEventListener("submit", (e) => {
-    e.preventDefault();
-    if(inputName.value === "" || inputSurname.value === "" || inputEmail.value === "" || password.value === ""){
-        submit.setAttribute("disabled");
-   
-  }
 
 
 
